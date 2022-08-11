@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class MoveController : MonoBehaviour
 {
-	private void Start()
+	public GameObject Player;
+
+	private float _speed = 50;
+
+	private void Update()
 	{
-		
+		if (Input.GetKey(KeyCode.W))
+		{
+			Player.transform.Translate(Vector3.forward * _speed * Time.deltaTime);
+		}
 	}
 }
