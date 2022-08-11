@@ -18,5 +18,9 @@ public class MoveController : MonoBehaviour
 		{
 			Player.transform.Translate(Vector3.back * _speed * Time.deltaTime);
 		}
+		if (Input.GetKeyDown(KeyCode.Space))
+		{
+			Player.transform.Translate(Vector3.up * _speed * Time.deltaTime);
+		}
 	}
 }
