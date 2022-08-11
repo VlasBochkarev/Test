@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class MoveController : MonoBehaviour
 {
- 
+	private void Start()
+	{
+		
+	}
 }
