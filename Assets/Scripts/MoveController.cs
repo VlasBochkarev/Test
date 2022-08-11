@@ -14,5 +14,9 @@ public class MoveController : MonoBehaviour
 		{
 			Player.transform.Translate(Vector3.forward * _speed * Time.deltaTime);
 		}
+		if (Input.GetKey(KeyCode.S))
+		{
+			Player.transform.Translate(Vector3.back * _speed * Time.deltaTime);
+		}
 	}
 }
