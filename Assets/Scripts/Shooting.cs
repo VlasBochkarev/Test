@@ -10,6 +10,7 @@ public class Shooting : MonoBehaviour
 	private float _shootRange = 50f;
 	[SerializeField] [Range(100,1000)]
 	private float _hitForce;
+	private int _shootDamage = 1;
 	private LineRenderer LaserLine;
 
 	private void Start()
@@ -36,6 +37,12 @@ public class Shooting : MonoBehaviour
 
 				if (Hit.transform.gameObject.CompareTag(ROCK))
 				{
+					DestroyerRock health = Hit.collider.GetComponent<DestroyerRock>();
+
+					if (health != null)
+					{
+						health.Damage(_shootDamage);
+					}
 					if (Hit.rigidbody != null)
 					{
 						Hit.rigidbody.AddForce(-Hit.normal * _hitForce);
