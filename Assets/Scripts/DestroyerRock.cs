@@ -5,8 +5,9 @@ using UnityEngine;
 public class DestroyerRock : MonoBehaviour
 {
     public int currentHealth = 3;
+    public static int UpdateScore;
 
-    public void Damage(int damageAmount)
+	public void Damage(int damageAmount)
     {
         currentHealth -= damageAmount;
 
@@ -14,6 +15,7 @@ public class DestroyerRock : MonoBehaviour
         {
             Destroy(gameObject);
             UIManager.Score++;
+            UpdateScore = UIManager.Score;
         }
     }
 }

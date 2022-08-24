@@ -10,7 +10,9 @@ public class UIManager : MonoBehaviour
 	public TextMeshProUGUI TextBestScore ;
 	public static int Score = 0;
 
+
 	private int _bestScore;
+
 
 
 
@@ -22,6 +24,7 @@ public class UIManager : MonoBehaviour
 
 	private void ShowScore()
 	{
+	
 		TextScore.text = "Score: " + Score;
 	}
 
