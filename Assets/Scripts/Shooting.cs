@@ -49,6 +49,7 @@ public class Shooting : MonoBehaviour
 
 					}
 					Debug.Log("HIT");
+					Debug.Log(Application.persistentDataPath);
 				}
 				else
 				{
