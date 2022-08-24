@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 public class Example : MonoBehaviour
 {
 	public GameObject Cube;
@@ -34,9 +33,7 @@ public class Example : MonoBehaviour
 			GameData.Rotation = Cube.transform.rotation;
 			Storage.Save(GameData);
 			Debug.Log($"Save Game{Application.persistentDataPath}");
-			
 		}
-
 	}
 
 	private void Load()
