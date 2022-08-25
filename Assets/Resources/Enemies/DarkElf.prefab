@@ -11,10 +11,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3cca78cce9ea84151b1692f8d821d102, type: 2}
+    - target: {fileID: 3287473289783769341, guid: 71559815b085a4deeb131d8cb48f8e6b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1c16edc90f2344fcb9975bf9ad306de1, type: 2}
     - target: {fileID: 5040843676780320315, guid: 71559815b085a4deeb131d8cb48f8e6b, type: 3}
       propertyPath: m_Name
       value: DarkElf
       objectReference: {fileID: 0}
+    - target: {fileID: 5040843676780320315, guid: 71559815b085a4deeb131d8cb48f8e6b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6556088771909348838, guid: 71559815b085a4deeb131d8cb48f8e6b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1c16edc90f2344fcb9975bf9ad306de1, type: 2}
     - target: {fileID: 7332777987387222826, guid: 71559815b085a4deeb131d8cb48f8e6b, type: 3}
       propertyPath: m_RootOrder
       value: 0

@@ -5,41 +5,24 @@ using UnityEngine;
 public class VectorArithmetic : MonoBehaviour
 {
 
-	public Transform PointRed;
 	public Transform PointBlack;
+	
 
 	private bool _isMoving;
 	[SerializeField]
 	private float _speedRoll = 3;
 
 
+
 	private void Update()
 	{
-		DotProduct();
+	
 		RollController();
 	}
 
 
 
-	private void DotProduct()
-	{
-		if (Input.GetKeyDown(KeyCode.X))
-		{
-			if (PointRed)
-			{
-				Vector3 BlackCube = transform.TransformDirection(Vector3.down);
-				Vector3 RedCube = PointRed.position - transform.position;
-				Debug.Log("DOT RESULT : " + Vector3.Dot(BlackCube, RedCube));
-
-				if (Vector3.Dot(BlackCube, RedCube) < 0)
-				{
-					Debug.Log("The Red Cube transform is above Black Cube!");
-
-				}
-			}
-		}
-
-	}
+	
 
 	private void RollController()
 	{
