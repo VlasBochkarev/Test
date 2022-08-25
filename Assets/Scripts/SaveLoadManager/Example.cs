@@ -33,6 +33,7 @@ public class Example : MonoBehaviour
 			GameData.Rotation = Cube.transform.rotation;
 			Storage.Save(GameData);
 			Debug.Log($"Save Game{Application.persistentDataPath}");
+		
 		}
 	}
 
