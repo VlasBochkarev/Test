@@ -14,7 +14,10 @@ public class UIManager : MonoBehaviour
 	private int _bestScore;
 
 
-
+	private void Start()
+	{
+		EventManager.EnemyDied += OnEnemyDied;
+	}
 
 	private void Update()
 	{
@@ -30,12 +33,19 @@ public class UIManager : MonoBehaviour
 
 	private void ShowBestScore()
 	{
-		
-		if(PlayerPrefs.GetInt("_bestScore") < Score)
+
+		if (PlayerPrefs.GetInt("_bestScore") < Score)
 		{
 			_bestScore = Score;
 			PlayerPrefs.SetInt("_bestScore", _bestScore);
 		}
 		TextBestScore.text = "Best Score: " + PlayerPrefs.GetInt("_bestScore");
 	}
+
+	private void OnEnemyDied()
+	{
+		Score++;
+		
+	}
+
 }

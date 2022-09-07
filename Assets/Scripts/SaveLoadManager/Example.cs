@@ -17,32 +17,32 @@ public class Example : MonoBehaviour
 	private void Update()
 	{
 		Save();
+		Load();
 
-		if (Input.GetKeyDown(KeyCode.L))
-		{
-			Load();
-		}
 	}
 
 	private void Save()
 	{
 		if (Input.GetKeyDown(KeyCode.K))
 		{
-			GameData.Score = DestroyerRock.UpdateScore;
+			GameData.Score = DestroyerEnemy.UpdateScore;
 			GameData.Position = Cube.transform.position;
 			GameData.Rotation = Cube.transform.rotation;
 			Storage.Save(GameData);
 			Debug.Log($"Save Game{Application.persistentDataPath}");
-		
+
 		}
 	}
 
 	private void Load()
 	{
-		GameData = (GameData)Storage.Load(new GameData());
-		Cube.transform.position = GameData.Position;
-		Cube.transform.rotation = GameData.Rotation;
-		UIManager.Score = GameData.Score;
-		Debug.Log($"Loaded score GameData.Score = {GameData.Score}");
+		if (Input.GetKeyDown(KeyCode.L))
+		{
+			GameData = (GameData)Storage.Load(new GameData());
+			Cube.transform.position = GameData.Position;
+			Cube.transform.rotation = GameData.Rotation;
+			UIManager.Score = GameData.Score;
+			Debug.Log($"Loaded score GameData.Score = {GameData.Score}");
+		}
 	}
 }

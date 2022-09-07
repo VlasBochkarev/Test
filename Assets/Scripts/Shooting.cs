@@ -37,7 +37,7 @@ public class Shooting : MonoBehaviour
 
 				if (Hit.transform.gameObject.CompareTag(ROCK))
 				{
-					DestroyerRock health = Hit.collider.GetComponent<DestroyerRock>();
+					DestroyerEnemy health = Hit.collider.GetComponent<DestroyerEnemy>();
 
 					if (health != null)
 					{
@@ -49,7 +49,7 @@ public class Shooting : MonoBehaviour
 
 					}
 					Debug.Log("HIT");
-					Debug.Log(Application.persistentDataPath);
+					
 				}
 				else
 				{

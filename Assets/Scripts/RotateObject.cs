@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class RotateObject : MonoBehaviour
 {
-	public GameObject Object;
+	//public GameObject Object;
 
 	private Vector3 _currentEulerAngles;
 	private float _rotationSpeedEuler = 1;
 	private float _rotateSpeedQuaternion = 1;
+
+
 
 	void Update()
 	{
 		RotatePlayerWithEulerAngles();
 		RotatePlayerWithQuaternion();
 	}
+
 
 	private void RotatePlayerWithEulerAngles()
 	{

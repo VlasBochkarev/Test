@@ -26,11 +26,11 @@ public class RespawnEnemies : MonoBehaviour
 		{
 			Vector3 BlackCube = transform.TransformDirection(Vector3.forward);
 			Vector3 PlayerPos = Player.position - transform.position;
-			Debug.Log("DOT RESULT : " + Vector3.Dot(BlackCube, PlayerPos));
+			//Debug.Log("DOT RESULT : " + Vector3.Dot(BlackCube, PlayerPos));
 
 			if (Vector3.Dot(BlackCube, PlayerPos) < 0)
 			{
-				Debug.Log("The Player transform is back Black Cube!");
+				//Debug.Log("The Player transform is back Black Cube!");
 				RespawnEnemy();
 			}
 		}
